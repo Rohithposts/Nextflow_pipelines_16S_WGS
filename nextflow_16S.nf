@@ -526,7 +526,6 @@ workflow {
     req_fastqs = Channel.fromPath("${params.input_directory}/*")
     primer_testing = req_fastqs.first()
     fastqc(req_fastqs)
-    //multiqc(fastqc.out)
     QIIME_manifest(Channel.value(file(params.input_directory)))
     primer_detection(Channel.value(file(params.input_directory)), QIIME_manifest.out)
     check_phred_quality_coding(Channel.value(file(params.input_directory)))
