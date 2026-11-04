@@ -10,3 +10,7 @@ Primer trimming using QIIME cutadapt
 DADA2 Denoising using qiime dada2
 ```
 The pipeline, in itself, handles all conda related dependencies and also downlaods the required SILVA classifier
+The pipeline can be run with the following command:
+```bash
+nextflow run nextflow_WGS.nf --input_directory /Path/to/Your/16S/Fastq/Files/ -with-conda
+```
