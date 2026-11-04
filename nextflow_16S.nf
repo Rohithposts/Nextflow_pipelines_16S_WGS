@@ -22,27 +22,6 @@ process fastqc {
     """
 }
 
-// process multiqc {
-
-//     publishDir "${params.input_directory}", mode: 'copy'
-
-//     input:
-//     path reads_1
-
-//     output:
-//     path "MultiQC/multiqc_data"
-//     val "MultiQC/multiqc_report.html"
-
-//     script:
-//     """
-//     mkdir -p MultiQC
-//     conda create -n multiqc -c conda-forge -c bioconda multiqc -y
-//     mamba run -n multiqc multiqc ${reads_1} -o MultiQC 
-//     conda env remove -n multiqc -y
-
-//     """
-// }
-
 process QIIME_manifest {
     publishDir "${params.input_directory}", mode: 'copy'
 
