@@ -66,7 +66,7 @@ else:
     filepaths = []
     for file in cur_dir.iterdir():
         ids.append(file.name.split(".")[0])
-        filepaths.append(os.abspath.path(file))
+        filepaths.append(os.path.abspath(file))
     with open("manifest_SE.tsv", "w") as f:
         f.write("sample-id\tabsolute-filepath\\n")
     for x in set(ids):
