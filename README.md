@@ -9,8 +9,12 @@ Fastq file phred encoding check
 Primer trimming using QIIME cutadapt
 DADA2 Denoising using qiime dada2
 ```
-The pipeline, in itself, handles all conda related dependencies and also downlaods the required SILVA classifier
+The pipeline, in itself, handles all conda related dependencies and also downlaods the required SILVA classifier; all the final files such as the abundance table, QIIME artifacts, FASTQC results etc. are stored in the same input direcotory.
 The pipeline can be run with the following command:
+```bash
+nextflow run nextflow_16S.nf --input_directory /Path/to/Your/16S/Fastq/Files/ -with-conda
+```
+Similarly, the WGS nextflow pipeline accepts the path to the WGS fastq files as input and runs FASTQC and Metaphlan3, storing the final results in the input directory.
 ```bash
 nextflow run nextflow_WGS.nf --input_directory /Path/to/Your/16S/Fastq/Files/ -with-conda
 ```
