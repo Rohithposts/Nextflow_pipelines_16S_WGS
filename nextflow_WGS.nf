@@ -43,12 +43,13 @@ process metaphlan_script {
         filenames.append(file.name)
     if "_" in filenames[0]:
         ids_PE = []
-        ids_PE.append(x.split("_")[0] for x in filenames)
+        for x in filenames:
+            ids_PE.append(x.split("_")[0])
         PE_f = ["_1", "_R1"]
         PE_r = ["_2", "_R2"]
         for f in PE_f:
             for r in PE_r:
-                for id in ids:
+                for id in ids_PE:
                     for file in filenames:
                         if id + f in file:
                             forward_f = file
