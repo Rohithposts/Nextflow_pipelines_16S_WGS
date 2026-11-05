@@ -23,3 +23,5 @@ nextflow run nextflow_WGS.nf --input_directory /Path/to/Your/WGS/Fastq/Files/ -w
 ```
 For more important information regaridng the WGS pipeline, please visit:
 https://github.com/Rohithposts/Nextflow_pipelines_16S_WGS/wiki/WGS-Pipeline
+
+Importantly, when running these pipelines, please ensure that your input directory contains only FASTQ files. If any other files are also detected, the pipeline doesnt run.
