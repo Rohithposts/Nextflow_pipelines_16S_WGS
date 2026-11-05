@@ -14,7 +14,7 @@ The pipeline can be run with the following command:
 ```bash
 nextflow run nextflow_16S.nf --input_directory /Path/to/Your/16S/Fastq/Files/ -with-conda
 ```
-For more important information regaridng the WGS pipeline, please visit:
+For more important information regaridng the 16S pipeline, please visit:
 https://github.com/Rohithposts/Nextflow_pipelines_16S_WGS/wiki/16S-Pipeline
 
 Similarly, the WGS nextflow pipeline accepts the path to the WGS fastq files as input and runs FASTQC and Metaphlan3, storing the final results in the input directory.
