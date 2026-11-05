@@ -54,7 +54,7 @@ process metaphlan_script {
                         if id + f in file:
                             forward_f = file
                         if id + r in file:
-                            reverse_f = file
+                            reverse_r = file
                             os.system("
                             metaphlan {forward_f}, {reverse_r} \
                             --input type fastq \
