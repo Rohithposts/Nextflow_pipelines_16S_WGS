@@ -46,3 +46,4 @@ Some important points to keep in mind when using the WGS pipeline:
 1)Metaphlan3, a slightly older version is used in this pipeline. This is done as it requires a relatively smaller sized database, as opposed to a 40 GB database for metaphlan4. This is more practically feasible for more devices of different storage spaces. For taxonomic profiling, the mpa_v30_CHOCOPhlAn_201901 metaphlan database is used.
 
 2)In the given pipeline, for all the FASTQ Files, Metaphlan analysis is done at the species level.
+
