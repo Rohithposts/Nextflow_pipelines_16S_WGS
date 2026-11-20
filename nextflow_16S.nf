@@ -22,6 +22,27 @@ process fastqc {
     """
 }
 
+process developer_citation {
+
+    publishDir "${params.input_directory}", mode: 'copy'
+    
+    output:
+    path "developer_citation.txt"
+
+    script:
+    '''
+    #!/usr/bin/env python3
+    with open("developer_citation.txt", "w") as f:
+        f.write(
+            
+            "This Pipeline was developed by Rohith.\\n"
+            "Contact: sreesairohith@gmail.com"
+            
+        )
+    '''
+}
+
+
 process QIIME_manifest {
     publishDir "${params.input_directory}", mode: 'copy'
 
@@ -526,6 +547,7 @@ workflow {
     req_fastqs = Channel.fromPath("${params.input_directory}/*")
     primer_testing = req_fastqs.first()
     fastqc(req_fastqs)
+    developer_citation()
     QIIME_manifest(Channel.value(file(params.input_directory)))
     primer_detection(Channel.value(file(params.input_directory)), QIIME_manifest.out)
     check_phred_quality_coding(Channel.value(file(params.input_directory)))
