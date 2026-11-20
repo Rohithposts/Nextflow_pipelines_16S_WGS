@@ -30,3 +30,4 @@ For more important information regaridng the WGS pipeline, please visit:
 https://github.com/Rohithposts/Nextflow_pipelines_16S_WGS/wiki/WGS-Pipeline
 
 Importantly, when running these pipelines, please ensure that your input directory contains only FASTQ files. If any other files are also detected, the pipeline doesnt run.
+Please ensure that you have an active internet connection when running the pipeline, as the pipeline downloads mutliplte conda based tools.
