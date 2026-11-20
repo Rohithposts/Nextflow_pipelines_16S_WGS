@@ -111,5 +111,6 @@ process metaphlan {
 workflow {
     req_fastqs = Channel.fromPath("${params.input_directory}/*")
     fastqc(req_fastqs)
+    metaphlan_script()
     metaphlan(req_fastqs)
 }
