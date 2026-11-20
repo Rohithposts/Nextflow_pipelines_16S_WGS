@@ -3,6 +3,7 @@ In both of the pipelines, the analysis is precceded by FASTQC analysis.
 The main selling point of these pipelines are the fact that they require minimal human intervention, with only the required input being the path to the directory containing the FASTQ files. 
 
 Please ensure that your input directory contains only FASTQ files. If any other file types are detected, the pipeline will not run.
+
 In the 16S pipeline, the following steps constitute the pipeline:
 ```bash
 FASTQC
