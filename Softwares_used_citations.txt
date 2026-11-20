@@ -1,0 +1,15 @@
+Multiple tools have been used in these pipelines. They have been cited here accordingly:
+
+1. Andrews S. (2010). FastQC: A Quality Control Tool for High Throughput Sequence Data. Babraham Bioinformatics. https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ 
+
+2. Bolyen E, Rideout JR, Dillon MR, et al. (2019). Reproducible, interactive, scalable and extensible microbiome data science using QIIME 2. Nature Biotechnology, 37, 852–857. https://doi.org/10.1038/s41587-019-0209-9 
+
+3. Blanco-Míguez A, Beghini F, Cumbo F, et al. (2023). Extending and improving metagenomic taxonomic profiling with uncharacterized species using MetaPhlAn 4. Nature Biotechnology. https://doi.org/10.1038/s41587-023-01688-w 
+
+4. Chuvochina M, Gerken J, Frentrup M, et al. (2026). SILVA in 2026: a global core biodata resource for rRNA within the DSMZ digital diversity. Nucleic Acids Research, 54(D1), D334–D341. https://doi.org/10.1093/nar/gkaf1247 
+
+5. Anaconda Inc. (2024). Conda: A cross-platform package and environment management system. https://docs.conda.io/en/latest/ 
+
+6. Di Tommaso P, Chatzou M, Floden EW, Barja PP, Palumbo E, Notredame C. (2017). Nextflow enables reproducible computational workflows. Nature Biotechnology, 35, 316–319. https://doi.org/10.1038/nbt.3820 
+
+
