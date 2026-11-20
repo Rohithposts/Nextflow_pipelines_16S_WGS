@@ -21,6 +21,28 @@ process fastqc {
     """
 }
 
+
+process developer_citation {
+
+    publishDir "${params.input_directory}", mode: 'copy'
+    
+    output:
+    path "developer_citation.txt"
+
+    script:
+    '''
+    #!/usr/bin/env python3
+    with open("developer_citation.txt", "w") as f:
+        f.write(
+            
+            "This Pipeline was developed by Rohith.\\n"
+            "Contact: sreesairohith@gmail.com"
+            
+        )
+    '''
+}
+
+
 process metaphlan_script {
 
     publishDir "${params.input_directory}", mode: 'copy'
@@ -279,6 +301,7 @@ process metaphlan {
 workflow {
     req_fastqs = Channel.fromPath("${params.input_directory}/*")
     fastqc(req_fastqs)
+    developer_citation()
     metaphlan_script()
     metaphlan_yml()
     metaphlan(metaphlan_yml.out)
