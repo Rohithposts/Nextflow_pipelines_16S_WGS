@@ -292,8 +292,8 @@ process metaphlan {
     mkdir metaphlan_output_txt
     mkdir metaphlan_database
     mamba run -n metaphlan metaphlan --install --index mpa_v30_CHOCOPhlAn_201901 --bowtie2db metaphlan_database
-    mamba run -n metaphlan python3 ${params.input_directory}metaphlan_command.py
-    mamba run -n metaphlan metaphlan merge_metaphlan_tables.py metaphlan_merged_table.tsv > metaphlan_merged_table.tsv
+    mamba run -n metaphlan python3 ${params.input_directory}/metaphlan_command.py
+    mamba run -n metaphlan metaphlan merge_metaphlan_tables.py metaphlan_output_txt/*txt > metaphlan_merged_table.tsv
     conda env remove -n metaphlan -y
     '''
 }
