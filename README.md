@@ -47,3 +47,7 @@ Some important points to keep in mind when using the WGS pipeline:
 
 2)In the given pipeline, for all the FASTQ Files, Metaphlan analysis is done at the species level.
 
+
+
+Contact: sreesairohith@gmail.com
+
